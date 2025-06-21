@@ -171,7 +171,6 @@ body {
     margin-left: 12vw; /* increased from 8vw to 12vw */
 }
 
-/* Move profile-card a little more to the right */
 .profile-card {
     justify-content: flex-start;
     margin-left: 60px; /* increased from 40px to 60px */
@@ -355,6 +354,31 @@ body {
     .hero-content {
         margin-left: 0;
         justify-items: center;
+    }
+}
+
+/* Mobile view: Stack hero-content and center both content and image */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        margin-left: 0;
+        justify-items: center;
+        text-align: center;
+    }
+    .profile-card {
+        margin-left: 0;
+        justify-content: center;
+    }
+    .hero-title,
+    .title-line,
+    .title-name,
+    .title-role,
+    .hero-description {
+        text-align: center;
+    }
+    .hero-buttons {
+        justify-content: center;
     }
 }
 
